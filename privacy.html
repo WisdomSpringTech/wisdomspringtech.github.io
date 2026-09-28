@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy — WisdomSpringTech</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 2.5rem auto; padding: 0 1rem; line-height: 1.5; color: #1a1a1a; }
+    h1 { font-size: 1.8rem; margin-bottom: 0.2rem; }
+    h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+    .legal { color: #333; margin-top: 0; }
+    a { color: #0b57d0; }
+  </style>
+</head>
+<body>
+  <h1>Privacy policy</h1>
+  <p class="legal">WisdomSpringTech. Effective 28 September 2026.</p>
+  <p>This policy describes the information collected for <strong>onto-kb</strong>, a hosted read-only MCP subscription at USD 20 per month, how that information is used, who receives it, how it is disclosed, and how it is protected.</p>
+  <p><a href="/">Home</a> · <a href="/terms.html">Terms of service</a></p>
+
+  <h2>Information collected</h2>
+  <ul>
+    <li><strong>This website.</strong> wisdomspringtech.github.io is a static page. It has no account form and does not ask for a name, email, or card number. The host may record ordinary request data such as IP address and browser type in order to deliver the page.</li>
+    <li><strong>Payment.</strong> Card number, card expiry, billing name, billing email, and billing address are entered on Stripe Checkout, not on this website and not on the onto-kb server. Stripe creates the customer and subscription records.</li>
+    <li><strong>Subscription check.</strong> After payment, the onto-kb server stores a signed browser cookie that contains the Stripe customer id. If you start Connect again in a different browser, you may type the email address from your Stripe receipt so the server can find that same active subscription. That email is sent to Stripe for the lookup and is not shown back on the page.</li>
+    <li><strong>Connector.</strong> Your AI chat app completes OAuth with the onto-kb server. The server issues an access token and a refresh token tied to the Stripe customer id. The token identifies the paid Connect. It is not a Google login for you, and it is not the operator’s bank details.</li>
+    <li><strong>Library use.</strong> Paid tool calls search and read documents in WisdomSpringTech’s Google Drive library. The server counts successful Connects and first library uses. Those counts are not tied to your name or email.</li>
+  </ul>
+
+  <h2>How information is used</h2>
+  <p>Payment information is used to charge USD 20 per month and to decide whether a Connect may receive a token. The receipt email is used only to continue an existing active subscription in a new browser, not to open a second subscription. Connector tokens are used to authorize read-only searches of the library. Counts are used to see whether Connect and library reads succeed. This website is used to describe the offer.</p>
+
+  <h2>Who receives information, and how</h2>
+  <ul>
+    <li><strong>Stripe</strong> receives the checkout details you submit on Stripe’s page, over HTTPS, and returns subscription status to the onto-kb server.</li>
+    <li><strong>Your AI chat app</strong> receives the connector tokens and the library text returned by a tool call you start. The app does not receive the operator’s bank account.</li>
+    <li><strong>Google</strong> receives the Drive requests the server makes with WisdomSpringTech’s own Google account. Subscribers do not connect their own Drive.</li>
+    <li><strong>Google Cloud</strong> hosts the onto-kb server and stores operational logs for that service.</li>
+    <li><strong>GitHub Pages</strong> hosts this website and serves the pages you request.</li>
+  </ul>
+  <p>WisdomSpringTech does not sell personal information. Card numbers are not disclosed to WisdomSpringTech because they are collected by Stripe.</p>
+
+  <h2>Security</h2>
+  <p>Pages and the onto-kb server are served over HTTPS. Card data is collected and stored by Stripe. The onto-kb server does not have a card form. Access tokens are signed by the server, last about one hour, and are refreshed only while Stripe reports the subscription as active. The subscription cookie is HTTP-only. Drive tools are read-only. The operator’s bank account is stored in Stripe for payouts and is not printed on this website, on Checkout, or in connector tokens.</p>
+
+  <h2>Contact</h2>
+  <p>Support contact for a subscriber is the customer support address and email printed on the Stripe receipt. This policy is published at <a href="https://wisdomspringtech.github.io/privacy.html">https://wisdomspringtech.github.io/privacy.html</a>.</p>
+</body>
+</html>
