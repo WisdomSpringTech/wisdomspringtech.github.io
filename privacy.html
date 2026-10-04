@@ -32,7 +32,7 @@
 
   <h2>Who receives information, and how</h2>
   <ul>
-    <li><strong>Stripe</strong> receives the checkout details you submit on Stripe’s page, over HTTPS, and returns subscription status to the onto-kb server.</li>
+    <li><strong>Stripe</strong> receives the checkout details you submit on Stripe’s page, over HTTPS, and returns subscription status to the onto-kb server. Stripe also receives the receipt email when you ask to continue a subscription in another browser, so the server can see whether that address has an active subscription.</li>
     <li><strong>Your AI chat app</strong> receives the connector tokens and the library text returned by a tool call you start. The app does not receive the operator’s bank account.</li>
     <li><strong>Google</strong> receives the Drive requests the server makes with WisdomSpringTech’s own Google account. Subscribers do not connect their own Drive.</li>
     <li><strong>Google Identity Platform</strong> receives the receipt email when you ask for a sign-in link, sends that one-time link, and then the temporary user created by the sign-in is deleted.</li>
@@ -45,7 +45,7 @@
   <p>Pages and the onto-kb server are served over HTTPS. Card data is collected and stored by Stripe. The onto-kb server does not have a card form. Access tokens are signed by the server, last about one hour, and are refreshed only while Stripe reports the subscription as active. The subscription cookie is HTTP-only. Drive tools are read-only. The operator’s bank account is stored in Stripe for payouts and is not printed on this website, on Checkout, or in connector tokens.</p>
 
   <h2>Deletion</h2>
-  <p>To ask for deletion of information WisdomSpringTech holds about you, email the customer support address printed on your Stripe receipt.</p>
+  <p>The onto-kb server does not keep your name or receipt email. The record WisdomSpringTech can delete is the Stripe customer: billing name, receipt email, billing address, and the subscription. Card numbers stay with Stripe. To ask for that deletion, email the customer support address printed on your Stripe receipt. Deleting the Stripe customer cancels the subscription.</p>
 
   <h2>Contact</h2>
   <p>Support contact for a subscriber is the customer support address and email printed on the Stripe receipt. This policy is published at <a href="https://wisdomspringtech.github.io/privacy.html">https://wisdomspringtech.github.io/privacy.html</a>.</p>
